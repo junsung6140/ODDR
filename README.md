@@ -2,7 +2,7 @@
 
 # ODDR: One-Step Deshadow Diffusion via Reward Guidance
 
-[Junseong Shin](https://junsung6140.github.io/)<sup>1</sup> · Kijun Kim<sup>2</sup> · Minseong Kim<sup>2</sup> · Dongjin Kim<sup>3</sup> · Tae Hyun Kim<sup>1,3†</sup>
+[Junseong Shin](https://junsung6140.github.io/)<sup>1</sup> · Kijun Kim<sup>2</sup> · Minseong Kim<sup>2</sup> · [Dongjin Kim](https://dongjinkim9.github.io/)<sup>3</sup> · [Tae Hyun Kim](https://sites.google.com/view/lliger9/)<sup>1,3†</sup>
 
 <sup>1</sup>Department of Artificial Intelligence, Hanyang University · <sup>2</sup>AX Future Technology Institute, KT · <sup>3</sup>Department of Computer Science, Hanyang University
 
