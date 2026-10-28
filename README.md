@@ -78,8 +78,12 @@ The code was tested with Python 3.10, PyTorch 2.0.1, and CUDA 11.7.
 
 ```bash
 huggingface-cli download sd2-community/stable-diffusion-2-1-base \
+    --include "model_index.json" "scheduler/*" "unet/config.json" "unet/diffusion_pytorch_model.safetensors" \
+              "vae/config.json" "vae/diffusion_pytorch_model.safetensors" \
     --local-dir checkpoints/stable-diffusion-2-1-base
 ```
+
+Only the UNet, the VAE and the scheduler are used (about 3.8 GB). The full repository is about 36 GB, so we recommend the `--include` filter above.
 
 **2. Our weights.** All three models are released together in one zip file: [ODDR_checkpoints.zip](https://drive.google.com/file/d/1DMsJM16l7-wF2VoytP6zKXtznMRI9P8E/view?usp=sharing) (272 MB).
 
