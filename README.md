@@ -74,20 +74,20 @@ The code was tested with Python 3.10, PyTorch 2.0.1, and CUDA 11.7.
 
 ### Pretrained models
 
-ODDR is built on **Stable Diffusion 2.1-base**. The original `stabilityai/stable-diffusion-2-1-base` repository is no longer available on Hugging Face. We use the community copy `sd2-community/stable-diffusion-2-1-base`, whose UNet and VAE weights are identical to the original (same SHA-256). Download it to `checkpoints/`:
+**1. Stable Diffusion 2.1-base (required).** ODDR is fine-tuned from Stable Diffusion 2.1-base, so you need to download it first. The original `stabilityai/stable-diffusion-2-1-base` repository is no longer available on Hugging Face. Please use the community copy `sd2-community/stable-diffusion-2-1-base`, whose UNet and VAE weights are identical to the original (same SHA-256):
 
 ```bash
 huggingface-cli download sd2-community/stable-diffusion-2-1-base \
     --local-dir checkpoints/stable-diffusion-2-1-base
 ```
 
-Our weights are in one zip file:
+**2. Our weights.** All three models are released together in one zip file: [ODDR_checkpoints.zip](https://drive.google.com/file/d/1DMsJM16l7-wF2VoytP6zKXtznMRI9P8E/view?usp=sharing) (272 MB).
 
-| File | Description | Download |
-|---|---|---|
-| `ODD.pkl` | Stage 1 model (ODD-LoRA + ODD-Conv) | |
-| `ODDR.pkl` | Final model (ODD + ODDR-LoRA) | [ODDR_checkpoints.zip](https://drive.google.com/file/d/1DMsJM16l7-wF2VoytP6zKXtznMRI9P8E/view?usp=sharing) (272 MB) |
-| `ShadowReward.pth` | ShadowReward head (the DINOv2 encoder is downloaded by `torch.hub`) | |
+| File | Description |
+|---|---|
+| `ODD.pkl` | Stage 1 model (ODD-LoRA + ODD-Conv) |
+| `ODDR.pkl` | Final model (ODD + ODDR-LoRA) |
+| `ShadowReward.pth` | ShadowReward head (the DINOv2 encoder is downloaded by `torch.hub`) |
 
 Unzip it into `checkpoints/`:
 
@@ -223,14 +223,5 @@ The code and the ODDR weights are released under the [CC BY-NC 4.0](https://crea
 ## Acknowledgements
 
 This code is built on [OSEDiff](https://github.com/cswry/OSEDiff). We thank the authors for releasing their code.
-
-```bibtex
-@inproceedings{wu2024one,
-  title     = {One-Step Effective Diffusion Network for Real-World Image Super-Resolution},
-  author    = {Wu, Rongyuan and Sun, Lingchen and Ma, Zhiyuan and Zhang, Lei},
-  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
-  year      = {2024}
-}
-```
 
 We also thank the authors of [diffusers](https://github.com/huggingface/diffusers), [AdcSR](https://github.com/Guaishou74851/AdcSR) (time- and text-free UNet forward), [SynShadow](https://github.com/naoto0804/SynShadow) (shadow mattes and the shadow synthesis model), [DINOv2](https://github.com/facebookresearch/dinov2), [LPIPS](https://github.com/richzhang/PerceptualSimilarity), and [ShadowFormer](https://github.com/GuoLanqing/ShadowFormer) (evaluation script).
