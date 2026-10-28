@@ -1,0 +1,40 @@
+Copyright (c) 2026 Junseong Shin, Kijun Kim, Minseong Kim, Dongjin Kim, Tae Hyun Kim
+
+This work (the ODDR source code and model weights) is licensed under the
+Creative Commons Attribution-NonCommercial 4.0 International License
+(CC BY-NC 4.0).
+
+You are free to:
+  Share - copy and redistribute the material in any medium or format.
+  Adapt - remix, transform, and build upon the material.
+
+Under the following terms:
+  Attribution - You must give appropriate credit, provide a link to the
+    license, and indicate if changes were made. You may do so in any
+    reasonable manner, but not in any way that suggests the licensor endorses
+    you or your use.
+  NonCommercial - You may not use the material for commercial purposes.
+  No additional restrictions - You may not apply legal terms or technological
+    measures that legally restrict others from doing anything the license
+    permits.
+
+This is a human-readable summary of (and not a substitute for) the license.
+The full legal code is available at:
+
+  https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+Third-party components:
+  - Portions of this code are derived from OSEDiff
+    (https://github.com/cswry/OSEDiff) and from diffusers
+    (https://github.com/huggingface/diffusers), both released under the
+    Apache License 2.0. These portions (oddr.py, models/) keep their original
+    license; see LICENSE-OSEDiff for the full Apache License 2.0 text.
+  - models/unet_forward.py is from AdcSR
+    (https://github.com/Guaishou74851/AdcSR, Apache License 2.0).
+  - dataloaders/synshadow.py is adapted from SynShadow
+    (https://github.com/naoto0804/SynShadow, MIT License).
+  - evaluation/measure_shadow.m is adapted from ShadowFormer
+    (https://github.com/GuoLanqing/ShadowFormer, MIT License).
+  - The models are built on Stable Diffusion 2.1-base (CreativeML Open
+    RAIL++-M License) and DINOv2 (Apache License 2.0). Use of the ODDR
+    weights must also comply with these licenses.
